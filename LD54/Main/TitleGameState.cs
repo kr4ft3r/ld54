@@ -22,7 +22,7 @@ namespace LD54.Main
             ui.textWindow.SetText("");
             ui.typeWriter.paragraphs.Clear();
             ui.typeWriter.paragraphs.Enqueue(
-                "       Enter your name and press enter to begin your   adventure!");
+                "       Enter your name and press enter to begin your   adventure, inmate!");
             ui.inputBox.state.ReceiveEvent("enable");
         }
 

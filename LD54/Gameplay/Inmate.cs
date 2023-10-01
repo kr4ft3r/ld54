@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 using Istina;
 using Istina.Parser;
 using LD54.Main;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace LD54.Gameplay
 {
     internal class Inmate
     {
         public string Name { get; set; }
+        public Tables.Personality Personality { get; set; }
+        public string Crime { get; set; }
 
         public readonly State[] relationshipStates;
 
@@ -40,6 +43,16 @@ namespace LD54.Gameplay
         public bool IsPlayer()
         {
             return this == GameData.Player;
+        }
+
+        public string GetPersonalityString()
+        {
+            return Personality.ToString().ToLower();
+        }
+
+        public string GetDescription()
+        {
+            return Name + " is " + GetPersonalityString() + " by nature. " + "He is in here for " + Crime;
         }
     }
 }

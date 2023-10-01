@@ -14,6 +14,7 @@ using System.Runtime.InteropServices;
 using System.Reflection;
 using Microsoft.Xna.Framework.Audio;
 using System.IO;
+using System.Diagnostics;
 
 namespace LD54.UI.Component
 {
@@ -112,6 +113,7 @@ namespace LD54.UI.Component
             if (c == (char)Keys.Enter)
             {
                 string input = GetInput();
+                Debug.WriteLine("input:" + input);
                 state.ReceiveEvent("process");
 
                 _processInput(input);

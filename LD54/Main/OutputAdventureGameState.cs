@@ -1,4 +1,5 @@
-﻿using LD54.UI;
+﻿using LD54.Gameplay;
+using LD54.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,13 +15,15 @@ namespace LD54.Main
         public OutputAdventureGameState(AdventureInterface ui)
         {
             this.ui = ui;
-            ui.typeWriter.paragraphs.Enqueue("Hello? Sup? Hello? Sup? Hello? Sup?");
-            ui.typeWriter.paragraphs.Enqueue("Ola, ola!");
+            GameData.Paragraphs.Enqueue(Tables.Strings["cellIntro"]);
         }
 
         public override void Enter()
         {
-            ui.typeWriter.paragraphs.Enqueue("Ola, ola!");
+            while(GameData.Paragraphs.Count > 0)
+            {
+                ui.typeWriter.paragraphs.Enqueue(GameData.Paragraphs.Dequeue());
+            }
         }
 
         public override void Exit()
@@ -38,10 +41,10 @@ namespace LD54.Main
         {
             ui.typeWriter.Update(elapsed);
 
-            if (ui.typeWriter.paragraphs.Count == 0 )
+            if (!ui.typeWriter.Typing && ui.typeWriter.paragraphs.Count == 0 )
             {
                 // That's all
-                //GameStateHandler.
+                GameStateHandler.GameState.ReceiveEvent("continue");
             }
         }
     }

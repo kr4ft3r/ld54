@@ -32,16 +32,16 @@ namespace LD54.Gameplay
             Stabber, Brute, Gossiper, Rapist
         }
 
-        public string[] Actions = { 
+        public static string[] Actions = { 
             "look", "talk"
         };
 
-        public string[] Contexts = { 
+        public static string[] Contexts = { 
             "politics", "sport", "crime"
         };
 
-        public string[] Crimes = {
-            "arsony", "robbery", "posession", "assault", "kidnapping", "murder", "sodomy", "piracy"
+        public static string[] Crimes = {
+            "arsony", "robbery", "posession", "assault", "kidnapping", "murder", "sodomy", "piracy", "extortion", "burglary"
         };
 
         public static Dictionary<Personality, (Action<Inmate,Inmate> hateAction, Action<Inmate, Inmate> loveAction)>
@@ -71,6 +71,11 @@ namespace LD54.Gameplay
                     )
                 },
             };
+
+        public static Dictionary<string,string> Strings = new Dictionary<string, string>() {
+            { "cellIntro", "You enter a crowded cell and greet your new friends. There is a help note on the wall, try reading it with \"look note\" or \"look help\". Good luck..."},
+            { "helpNote", "Each command will make a day pass except for \"look\" so feel free to look at your inmates to learn more about them. You can \"talk\" to your inmates about any topic, as long as it is politics, sport, or crime. (\"talk (name) (topic)\"). If you omit the name you will talk to the whole cell." }
+        };
     }
 
     

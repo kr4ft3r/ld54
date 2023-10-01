@@ -11,6 +11,7 @@ namespace LD54.UI
 {
     internal class TypeWriter
     {
+        public bool Typing { get; private set; } = false;
         public readonly TextWindow textWindow;
         private readonly SoundEffect sfx;
         public TypeWriter(TextWindow textWindow) 
@@ -28,7 +29,11 @@ namespace LD54.UI
 
         public void Update(double elapsed) 
         {
-            if (_currentParagraph == "" && paragraphs.Count == 0) return;
+            if (_currentParagraph == "" && paragraphs.Count == 0) {
+                Typing = false;
+                return;
+            }
+            Typing = true;
 
             _elapsed += elapsed;
             double step = 0.05;//.02;
