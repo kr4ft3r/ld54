@@ -2,7 +2,7 @@
 [Tt]humbs.db
 *.DS_Store
 
-/bin
+LD54/bin
 /.vs
 
 #Visual Studio files
