@@ -1,0 +1,5 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/milos/source/repos/LD54/LD54/Content/bittyHuge.spritefont","C:/Users/milos/source/repos/LD54/LD54/Content/bin/DesktopGL/Content/bittyHuge.xnb","FontDescriptionProcessor","SpriteFontContent",2081,136223,0.3366438
+"C:/Users/milos/source/repos/LD54/LD54/Content/bittyLarge.spritefont","C:/Users/milos/source/repos/LD54/LD54/Content/bin/DesktopGL/Content/bittyLarge.xnb","FontDescriptionProcessor","SpriteFontContent",2081,70687,0.3199817
+"C:/Users/milos/source/repos/LD54/LD54/Content/font.spritefont","C:/Users/milos/source/repos/LD54/LD54/Content/bin/DesktopGL/Content/font.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0.29468
+"C:/Users/milos/source/repos/LD54/LD54/Content/fontLarge.spritefont","C:/Users/milos/source/repos/LD54/LD54/Content/bin/DesktopGL/Content/fontLarge.xnb","FontDescriptionProcessor","SpriteFontContent",2059,70688,0.0299298
