@@ -29,11 +29,11 @@ namespace LD54.Gameplay
 
         public enum Personality
         {
-            Stabber, Brute, Gossiper, Rapist
+            Stabber, Brute, Gossiper, Rapist, Junky
         }
 
         public static string[] Actions = { 
-            "look", "talk"
+            "look", "talk", "beat", "rape", "gossip", "stab", "drug"
         };
 
         public static string[] Contexts = { 
@@ -41,7 +41,7 @@ namespace LD54.Gameplay
         };
 
         public static string[] Crimes = {
-            "arsony", "robbery", "posession", "assault", "kidnapping", "murder", "sodomy", "piracy", "extortion", "burglary"
+            "arsony", "robbery", "drugs", "assault", "kidnapping", "murder", "sodomy", "piracy", "extortion", "burglary", "fraud"
         };
 
         public static Dictionary<Personality, (Action<Inmate,Inmate> hateAction, Action<Inmate, Inmate> loveAction)>
@@ -74,7 +74,7 @@ namespace LD54.Gameplay
 
         public static Dictionary<string,string> Strings = new Dictionary<string, string>() {
             { "cellIntro", "You enter a crowded cell and greet your new friends. There is a help note on the wall, try reading it with \"look note\" or \"look help\". Good luck..."},
-            { "helpNote", "Each command will make a day pass except for \"look\" so feel free to look at your inmates to learn more about them. You can \"talk\" to your inmates about any topic, as long as it is politics, sport, or crime. (\"talk (name) (topic)\"). If you omit the name you will talk to the whole cell." }
+            { "helpNote", "Each command will make a day pass except for \"look\" so feel free to look at your inmates to learn more about them. You can \"talk\" about any topic, as long as it is politics, sport, or crime. (\"talk (topic)\"). You should learn your inmates likes and dislikes. Someone who hates you or likes you too much will hurt you according to his nature. Other inmates have their own relationships and may hurt each other." }
         };
     }
 

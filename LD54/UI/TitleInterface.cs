@@ -32,7 +32,7 @@ namespace LD54.UI
                         return;
                     }
 
-                    Inmate player = new Inmate();
+                    Inmate player = new Inmate(0);
                     player.Name = input.Trim();
 
                     GameData.Player = player;

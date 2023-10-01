@@ -1,4 +1,5 @@
 ﻿using LD54.UI;
+using LD54.UI.Component;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -20,6 +21,8 @@ namespace LD54.Main
 
         public override void Enter()
         {
+            ui.UpdateInmateBoxes();
+            ui.inputBox.SetPrompt("HP:" + GameData.Player.HP + ">> ");
             ui.inputBox.state.ReceiveEvent("enable");
         }
 
@@ -31,7 +34,14 @@ namespace LD54.Main
         public override void Draw(float deltaTime)
         {
             ui.inputBox.Draw();
+
+            if (GameData.GameOver) return;
+
             ui.textWindow.Draw();
+            foreach(InmateBox box in ui.inmates)
+            {
+                box.Draw();
+            }
         }
 
         public override void Update(double elapsed)

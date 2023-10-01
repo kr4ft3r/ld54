@@ -34,3 +34,8 @@ C:\Users\milos\source\repos\LD54\LD54\bin\Debug\net7.0\Content\bittyHuge.xnb
 C:\Users\milos\source\repos\LD54\LD54\bin\Debug\net7.0\sfx\prp.wav
 C:\Users\milos\source\repos\LD54\LD54\bin\Debug\net7.0\sfx\put.wav
 C:\Users\milos\source\repos\LD54\LD54\bin\Debug\net7.0\sfx\uip.wav
+C:\Users\milos\source\repos\LD54\LD54\bin\Debug\net7.0\sfx\beat.wav
+C:\Users\milos\source\repos\LD54\LD54\bin\Debug\net7.0\sfx\gossip.wav
+C:\Users\milos\source\repos\LD54\LD54\bin\Debug\net7.0\sfx\pllup.wav
+C:\Users\milos\source\repos\LD54\LD54\bin\Debug\net7.0\sfx\r.wav
+C:\Users\milos\source\repos\LD54\LD54\bin\Debug\net7.0\sfx\stab.wav

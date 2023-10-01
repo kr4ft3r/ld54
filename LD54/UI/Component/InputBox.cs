@@ -57,6 +57,13 @@ namespace LD54.UI.Component
             _ui.spriteBatch.DrawString(_font, _characters, position, Color.WhiteSmoke);
         }
 
+        public void SetPrompt(string prompt)
+        {
+            _characters.Remove(0, _prompt.Length);
+            _prompt = prompt;
+            _characters.Insert(0, _prompt);
+        }
+
         public void StateUpdate(object sender, string newState)
         {
             typeof(InputBox).GetMethod("On_" + newState, BindingFlags.NonPublic | BindingFlags.Instance)?.Invoke(this, null);

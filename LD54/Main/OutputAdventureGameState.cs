@@ -20,7 +20,7 @@ namespace LD54.Main
 
         public override void Enter()
         {
-            while(GameData.Paragraphs.Count > 0)
+            while (GameData.Paragraphs.Count > 0)
             {
                 ui.typeWriter.paragraphs.Enqueue(GameData.Paragraphs.Dequeue());
             }
@@ -28,7 +28,6 @@ namespace LD54.Main
 
         public override void Exit()
         {
-            //throw new NotImplementedException();
         }
 
         public override void Draw(float deltaTime)
